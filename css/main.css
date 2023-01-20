@@ -87,61 +87,102 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* -------------------- Base Header - Footer Styles -------------------- */
+/* ------ Base Header - Footer Styles ----- */
 
-header, 
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+}
+
+header,
 footer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  
+  align-items: center; /*doesn't seem do anything */
+  flex-flow: row wrap; /*doesn't seem do anything */
+
 }
+
+header {
+  padding: 15px 0;
+}
+
 
 header .content-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: center; /*doesn't seem do anything */
   align-items: center;
-  flex-flow: row wrap;
-  
+  flex-flow: row wrap; /*wraps items when window is smaller */
+  margin: 0;
 }
 
-header nav { /*flex here didn't do anything diff*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+.header-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 20px 0;
+}
 
+header nav {
+  display: flex;
+  justify-content: space-around; /*Doesn't seem to do anything */
+  align-items: center; /*Doesn't seem to do anything */
+  flex-flow: row wrap; /*Doesn't seem to do anything */
+  width: 60%; /*widened container */
+  
 }
 
 header nav ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  justify-content: space-around; /*Doesn't seem to do anything */
   list-style: none;
-} 
+  padding: 0;
+  width: 100%;
+}
+
+footer {
+  flex-direction: column;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .content-wrapper {
+  width: 55%;
+  margin: 50px 0;
+ 
+}
+
+footer .contact {
+  margin-bottom: 50px;
+}
 
 footer .social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
- 
 }
 
-footer .social p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
+footer .social-icons p {
+  display: flex; /*Doesn't seem to do anything */
+  justify-content: center; /*Doesn't seem to do anything */
+  align-items: center; /*Doesn't seem to do anything */
+  
 }
+
+/* -------------------- Mobile Styles - Homepage -------------------- */
+
+/* Hero Area */
 
 .hero-area {
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  flex-flow: row wrap;
 }
+
+/* -----Main Section------ */
+
+/* Aside */
 
 aside {
   display: flex;
@@ -150,11 +191,21 @@ aside {
   flex-flow: row wrap;
 }
 
+/* Features */
+
 .features {
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  flex-flow: row wrap;
+}
+
+.features h2 {
+   margin-bottom: 60px;
+}
+
+.features article {
+  width: 60%;
+  margin: 30px 0;
 }
 
 .features .feature-items {
@@ -165,18 +216,40 @@ aside {
 
 }
 
+.features p {
+  margin: 0;
+}
+
+
+
+/* Reviews */
+
 .reviews {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
+
 }
+
+.reviews h2 {
+  margin-bottom: 40px;
+}
+
+.reviews h3 {
+  width: 50%;
+  margin: 20px 0;
+}
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
 
 .mission {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+
 }
 
 .contact-section {
@@ -184,22 +257,40 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+
 }
+
+.contact-content p {
+  margin: 0;
+}
+
+/* ==========================================================================
+   FAQ Page
+   ========================================================================== */
 
 .faq {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+
 }
 
 .faq .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
+  margin: 50px 0 0 0;
 }
 
+.faq h2 {
+  margin-bottom: 40px;
+}
 
+.faq-content {
+  margin-bottom: 50px;
+}
 
 /* ==========================================================================
    Helper classes
@@ -374,4 +465,3 @@ aside {
     page-break-after: avoid;
   }
 }
-
