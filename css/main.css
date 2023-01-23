@@ -360,6 +360,40 @@ input[type=button] {
   background-color: #527158;
 }
 
+/* Relative positioning means an element is positioned relative to its normal 
+spot on the page. In other words, you can adjust it to the top, bottom, right, 
+or left without interrupting the flow of the other elements on the page. 
+That’s very important here because the map figure will be will be the 
+container for the map. Because you’re placing the iFrame inside of 
+this figure, you’ll also set the padding-bottom to 125% to create 
+enough space for the map. */
+
+.map figure {
+  width: 100%;
+  height: 0; 
+  padding-bottom: 125%; 
+  overflow: hidden;
+  position: relative;
+}
+
+/* Now, take a look at the code for the map iFrame itself. 
+Although iFrames aren’t responsive on their own, here’s a handy fix: 
+absolute positioning. Absolute positioning means an element – 
+like the map iFrame, in this example – will be positioned 
+relative to the nearest parent element (the map figure). 
+By using positioning in this way, the map can shrink or expand 
+to be responsive without interrupting the flow of the page’s 
+other elements. Everything stays nice and aligned and your map 
+is responsive. */
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+
 .contact-section {
   display: flex;
   justify-content: center;
@@ -784,7 +818,7 @@ input[type=button] {
       font-size: 1.125em;
       line-height: 1;
   }
-  
+
 }
 
 /* ==========================================================================
