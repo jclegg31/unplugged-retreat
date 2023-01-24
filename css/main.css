@@ -199,6 +199,7 @@ header nav ul {
   display: flex;
   justify-content: space-around; /*Doesn't seem to do anything */
   width: 100%;
+  padding: 0;
 }
 
 header nav ul li {
