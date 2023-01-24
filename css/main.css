@@ -374,6 +374,11 @@ input[type=button] {
   align-items: center;
   flex-flow: row wrap;
   background-color: #527158;
+
+}
+
+.mission-content p {
+  margin: 14px 0;
 }
 
 /* Relative positioning means an element is positioned relative to its normal 
@@ -714,6 +719,7 @@ is responsive. */
 
   .mission-content p {
     width: 45%;
+    
   }
 
   .map figure {
