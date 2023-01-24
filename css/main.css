@@ -232,6 +232,16 @@ footer .social-icons p {
   display: flex; /*Doesn't seem to do anything */
   justify-content: center; /*Doesn't seem to do anything */
   align-items: center; /*Doesn't seem to do anything */
+  
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  
+  background-color: #527158;
+}
+
+footer .social-icons p i {
+   font-size: 1.25em;
 }
 
 footer .copyright {
@@ -582,6 +592,7 @@ is responsive. */
 
   header nav ul {
     justify-content: space-between;
+    padding: 0;
   }
 
   .header-divider {
@@ -677,6 +688,11 @@ is responsive. */
 
   footer p {
     line-height: 1.285;
+  }
+
+  footer .social-icons {
+    width: 12em;
+    justify-content: space-between;
   }
 
   footer .copyright {
